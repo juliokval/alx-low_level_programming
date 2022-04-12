@@ -4,7 +4,7 @@
   * @c: takes in a character
   * Return: 0 for uppercase, 1 for lowercase
   */
-int  _islower(int c)
+int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
@@ -15,4 +15,3 @@ int  _islower(int c)
 		return (0);
 	}
 }
-	
