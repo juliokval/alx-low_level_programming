@@ -11,18 +11,14 @@ int main(void)
 
 	printf("Infinite loop incoming :(\n");
 
-
 			i = 0;
-
 
 /*while (i < 10)*/
 /*(*/
 /*putchar(i);*/
 /*)*/
 
-
 	printf("Infinite loop incoming \\o/\n");
-
 
 	return (0);
 }
