@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-  * _isupper - function that checks for uppercase character
-  *@c: print int
-  * RETURN: Alwsys 0
+  * _isupper - a function that checks for uppercase character
+  * @c: print int
+  * RETURN: prints 1 or 0
   */
 
 int _isupper(int c)
