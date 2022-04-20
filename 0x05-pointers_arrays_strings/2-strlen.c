@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * _strlen - function that returns the length of a string 
- * @s: A pointer to an int that will be changed/updated
- *
- * Rerurn: void that means our answer is correct
- */
+  * _strlen - function that returns the length of a string
+  *
+  * @s: A pointer to an int that will be changed/updated
+  *
+  * Rerurn: void that means our answer is correct
+  */
 
 int _strlen(char *s)
 {
