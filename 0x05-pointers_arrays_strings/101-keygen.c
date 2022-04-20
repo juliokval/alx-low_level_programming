@@ -10,24 +10,17 @@
 
 int main(void)
 {
-	char a[100];
-	int r, n, i;
+	int pass, sum;
 
-	n = 0;
-	i - 0;
 	srand(time(NULL));
-	while (n < 2645)
+	sum = 0;
+	while (sum <= 2645)
 	{
-		r = rand() % 122;
-		if (r > 32)
-		{
-			a[i++] = r;
-			n += r;
-		}
+		pass = (rand() % 128);
+		sum += pass;
+		printf("%c", pass);
 	}
-	a[i++] = (2772 - n);
-	a[i] = '\0';
-	printf("%s". a);
+	printf("%c", 2722 - sum);
 
 	return (0);
 }
