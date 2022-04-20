@@ -1,8 +1,7 @@
 #include "main.h"
-
 /**
  * print_rev - prints a string in reverse order
- * @S: A pointer to an int that will be changed/updated 
+ *@S: A pointer to an int that will be changed
  *
  * Return: void which means our answer is correct
  */
