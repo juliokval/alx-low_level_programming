@@ -1,13 +1,13 @@
 #include "main.h"
+
 /**
-  * print_rev - function that prints a string, in reverse, followed by a new line
-  * @s: A pointer to an int that will be changed 
-  * 
-  * Return: void which means our answer is correct
-  */
+ * print_rev - prints a string in reverse order
+ * @S: A pointer to an int that will be changed/updated 
+ *
+ * Return: void which means our answer is correct
+ */
 
 void print_rev(char *s)
-
 {
 	int i;
 
@@ -17,7 +17,7 @@ void print_rev(char *s)
 		i++;
 	}
 
-	for (i = i - 1; 1 >= 0; i--)
+	for (i = i - 1 ; 1 >= 0; i--)
 	{
 		_putchar (s[i]);
 	}
