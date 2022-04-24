@@ -4,7 +4,7 @@
   * @dest: destination
   * @src: source
   * @n: amount of bytes from src
-  * Return: the pointer to dest 
+  * Return: The pointer to dest 
   */
 
 
