@@ -1,15 +1,15 @@
-#include <stdlib>
+#include <stdlib.h>
 
 /**
-  * _calloc - function that allocates memory for an array, using malloc
-  * @nmemb: number of elements of the array
-  * @size: size of each element of the array
-  * Return: pointer to the allocated memory (SUCCESS) OR
-  * NULL if @nmemb or @size is 0 (FAILURE) OR
-  * null if insufficient memory was available (FAILURE)
-  */
+ * _calloc - allocates memory for an array, using malloc, and initializes to 0
+ * @nmemb: number of elements of the array
+ * @size: size of each element of the array
+ * Return: pointer to the allocated memory (SUCCESS) or
+ * NULL if @nmemb or @size is 0 (FAILURE) or
+ * NULL if insufficient memory was available (FAILURE)
+ */
 
-void *_calloc(unsigned int nmemb, unsigned int size);
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
 	char *ptr;
@@ -21,7 +21,9 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 
 	if (ptr == NULL)
 		return ('\0');
+
 	for (i = 0; i < nmemb * size; i++)
 		ptr[i] = 0;
+
 	return ((void *)ptr);
 }
