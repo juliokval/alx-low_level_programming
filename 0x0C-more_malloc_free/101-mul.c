@@ -1,4 +1,6 @@
+#include "main.h"
 #include <stdlib.h>
+#include <studio.>
 
 /**
  * _atoi_digit - convert a char to integer.
