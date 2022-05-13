@@ -1,40 +1,28 @@
-#include "3-calc.h"
+#ifndef FILE_CALC
+#define FILE_CALC
 
 /**
- * main - check the code for Holberton School students.
- * @argc: argument count.
- * @argv: argument vector.
- *
- * Return: Always 0.
+ * struct op - Structure op
+ * @op: operator
+ * @f: function
  */
-int main(int argc, char *argv[])
+
+typedef struct op
 {
-	int a, b;
-	int (*operation)(int, int);
+	char *op;
+	int (*f)(int a, int b);
+} op_t;
 
-	if (argc != 4)
-	{
-		printf("Error\n");
-		exit(98);
-	}
+int op_add(int a, int b);
 
-	if (argv[2][1])
-	{
-		printf("Error\n");
-		exit(99);
-	}
+int op_sub(int a, int b);
 
-	operation = get_op_func(argv[2]);
+int op_mul(int a, int b);
 
-	if (operation == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
+int op_div(int a, int b);
 
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
+int op_mod(int a, int b);
 
-	printf("%d\n", operation(a, b));
-	return (0);
-}
+int (*get_op_func(char *s))(int, int);
+
+#endif
