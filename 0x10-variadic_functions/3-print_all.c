@@ -1,6 +1,7 @@
 #include "variadic_functions.h"
 #include<stdio.h>
 #include<stdarg.h>
+
 /**
  * p_char - print char
  * @list:arg
@@ -11,6 +12,7 @@ void p_char(va_list list)
 {
 	printf("%c", va_arg(list, int));
 }
+
 /**
  * p_string - print string
  * @list:arg
@@ -26,6 +28,7 @@ void p_string(va_list list)
 		str = "(nil)";
 printf("%s", str);
 }
+
 /**
  * p_integer - print integer
  * @list:arg
@@ -36,6 +39,7 @@ void p_integer(va_list list)
 {
 	printf("%i", va_arg(list, int));
 }
+
 /**
  * p_float - print float
  * @list:arg
@@ -46,11 +50,13 @@ void p_float(va_list list)
 {
 	printf("%f", va_arg(list, double));
 }
+
 /**
  * print_all - print everything
  * @format:arg
  * Return: void
  */
+
 void print_all(const char * const format, ...)
 
 {
