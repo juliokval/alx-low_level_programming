@@ -24,5 +24,5 @@ va_start(list, n);
 		sum += va_arg(list, int);
 	}
 	va_end(list);
-	return (sum);
+	return (sum;);
 }
