@@ -9,7 +9,7 @@ void print_all(const char * const format, ...);
 #include<stdarg.h>
 
 /**
- * struct print - function that prints multiple choice
+ * struct print - multiple chice print
  * @x: char Type of print
  * @T_func: function
  */
