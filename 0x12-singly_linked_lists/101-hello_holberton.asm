@@ -1,6 +1,5 @@
  SECTION .data
 msg:    db "Hello, Holberton,", 0
-msg2:   db "...and goodbye!", 0
 fmt:    db "%s", 10, 0
 
 SECTION .text
