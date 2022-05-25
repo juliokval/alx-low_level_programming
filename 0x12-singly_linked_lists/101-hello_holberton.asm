@@ -3,9 +3,9 @@ msg:    db "Hello, Holberton,", 0
 msg2:   db "...and goodbye!", 0
 fmt:    db "%s", 10, 0
 
-        SECTION .text
-        extern printf
-        global main, 
+SECTION .text
+extern printf
+global main,
 main:
 
 mov esi, msg    ; 64-bit ABI passing order starts w/ edi, esi, ...
