@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 /**
  * free_listp2 - frees a linked list
  * @head: head of a list.
@@ -22,6 +21,7 @@ void free_listp2(listp_t **head)
 		*head = NULL;
 	}
 }
+
 /**
   * free_listint_safe - The function that frees a listint_t list
   * @h: A pointer to the first node in the linked list
@@ -29,31 +29,42 @@ void free_listp2(listp_t **head)
   */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t len = 0;
-	int diff;
-	listint_t *temp;
+	size_t nnodes = 0;
+	listp_t *hptr, *new, *add;
+	listint_t *curr;
 
-	if (!h || !*h)
-		return (0);
-
-	while (*h)
+	hptr = NULL;
+	while (*h != NULL)
 	{
-		diff = *h - (*h)->next;
-		if (diff > 0)
+		new = malloc(sizeof(listp_t));
+
+		if (new == NULL)
+			exit(98);
+
+		new->p = (void *)*h;
+		new->next = hptr;
+		hptr = new;
+
+		add = hptr;
+
+		while (add->next != NULL)
 		{
-			temp = (*h)->next;
-			*h = temp;
-			len++;
+			add = add->next;
+			if (*h == add->p)
+			{
+				*h = NULL;
+				free_listp2(&hptr);
+				return (nnodes);
+			}
 		}
-		else
-		{
-			*h = NULL;
-			len++;
-			break;
-		}
+
+		curr = *h;
+		*h = (*h)->next;
+		free(curr);
+		nnodes++;
 	}
 
 	*h = NULL;
-
-	return (len);
+	free_listp2(&hptr);
+	return (nnodes);
 }
