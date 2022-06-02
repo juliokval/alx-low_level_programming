@@ -4,3 +4,5 @@
   *POSIX standard output
   * @filename: represents a pointer
   * @letters: the number of letters it should read or print
+  * Return: the actual number of letters it could read and print
+
