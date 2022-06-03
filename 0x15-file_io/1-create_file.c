@@ -5,9 +5,9 @@
 #include <stdlib.h>
 #include "main.h"
 /**
-  * create_file - function that creates a file
+  * create_file - creates a file
   * @filename: name of the the file to create
-  * @test_content: NULL terminated string to write to the file
+  * @text_content: NULL terminated string to write to the file
   * Return: 1 on success, -1 on failure(file can not be created
   *file can not be written, write “fails”, etc…)
   */
@@ -21,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 	if (!text_content)
-		return (1);
+		text_content = "";
 	for (len = 0; text_content[len] != '\0'; len++)
 		;
 	write(fd, text_content, len);
