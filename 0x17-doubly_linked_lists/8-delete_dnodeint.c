@@ -6,8 +6,8 @@
   * @head: a pointer to the head of the dlistint_t
   * @index: the index of the node to delete
   *
-  * Return: upon success -1
-  * otherwise - -1
+  * Return: upon success 1
+  * otherwise -1
   */
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
@@ -34,6 +34,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	else
 	{
 		tmp->prev->next = tmp->prev;
+		if (tmp->next != NULL)
+			tmp->next->prev = tmp->prev;
 	}
 
 	free(tmp);
