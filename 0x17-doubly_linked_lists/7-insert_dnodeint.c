@@ -1,10 +1,11 @@
 #include "lists.h"
 
 /**
-  * insert_dnodeint_at_index - function that inserts a new node at a given position
+  * insert_dnodeint_at_index - inserts a new node at a given position
   * @h: a pointer to the head of the dlistint_t list
   * @idx: the position to insert the new node
   * @n: the integer for the new node to contain
+  *
   * Return: the address of the node, or NULL, if it failed
   */
 
